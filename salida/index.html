@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demos del sistema</title>
+<style>
+  :root {
+    --fondo: #0e1116;
+    --panel: #161b22;
+    --panel-alto: #1c2230;
+    --borde: #262d38;
+    --texto: #e6edf3;
+    --tenue: #8b949e;
+    --acento: #4f8cff;
+    --verde: #3fb950;
+    --ambar: #d29922;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: radial-gradient(circle at 20% 0%, #182030 0%, var(--fondo) 45%);
+    color: var(--texto);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+  }
+  .contenedor { max-width: 1080px; margin: 0 auto; padding: 72px 24px 96px; }
+  .portada { margin-bottom: 56px; }
+  .portada h1 {
+    font-size: 2.4rem;
+    margin: 0 0 12px;
+    letter-spacing: -0.03em;
+    font-weight: 700;
+  }
+  .portada p { margin: 0; color: var(--tenue); max-width: 62ch; }
+  .grilla {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 24px;
+  }
+  .tarjeta {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(160deg, var(--panel-alto), var(--panel));
+    border: 1px solid var(--borde);
+    border-radius: 16px;
+    padding: 28px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease;
+  }
+  a.tarjeta:hover {
+    transform: translateY(-3px);
+    border-color: var(--acento);
+    box-shadow: 0 14px 34px rgba(79, 140, 255, 0.16);
+  }
+  .tarjeta.pendiente { opacity: 0.6; }
+  .tarjeta-encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+  }
+  .numero {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--acento);
+    border: 1px solid var(--acento);
+    border-radius: 8px;
+    padding: 3px 10px;
+  }
+  .estado {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+  }
+  .estado.listo {
+    color: var(--verde);
+    background: rgba(63, 185, 80, 0.12);
+    border: 1px solid rgba(63, 185, 80, 0.35);
+  }
+  .estado.pendiente {
+    color: var(--ambar);
+    background: rgba(210, 153, 34, 0.12);
+    border: 1px solid rgba(210, 153, 34, 0.35);
+  }
+  .tarjeta h2 { font-size: 1.3rem; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .cliente {
+    margin: 0 0 16px;
+    color: var(--tenue);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .descripcion { margin: 0 0 18px; color: #c2ccd6; font-size: 0.95rem; }
+  .destacado {
+    margin: 0 0 18px;
+    font-size: 0.9rem;
+    color: var(--texto);
+    background: rgba(79, 140, 255, 0.08);
+    border-left: 3px solid var(--acento);
+    padding: 8px 14px;
+    border-radius: 0 8px 8px 0;
+  }
+  .etiquetas { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+  .etiqueta {
+    font-size: 0.75rem;
+    color: var(--tenue);
+    border: 1px solid var(--borde);
+    border-radius: 999px;
+    padding: 2px 10px;
+    font-family: ui-monospace, monospace;
+  }
+  .accion { margin-top: auto; }
+  .boton {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--acento);
+    color: #08121f;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+  }
+  .boton .flecha { transition: transform 0.16s ease; }
+  a.tarjeta:hover .boton .flecha { transform: translateX(4px); }
+  .boton.deshabilitado {
+    background: transparent;
+    border: 1px solid var(--borde);
+    color: var(--tenue);
+  }
+  footer {
+    color: var(--tenue);
+    font-size: 0.82rem;
+    margin-top: 64px;
+    border-top: 1px solid var(--borde);
+    padding-top: 20px;
+  }
+</style>
+</head>
+<body>
+<div class="contenedor">
+  <div class="portada">
+    <h1>Demos del sistema</h1>
+    <p>Recorrido de módulos con captura de pantalla y video de cada proyecto. Cada demo se genera ejecutando el script de captura sobre el sistema en funcionamiento.</p>
+  </div>
+  <div class="grilla">
+      <div class="tarjeta activa">
+        <div class="tarjeta-encabezado">
+          <span class="numero">01</span>
+          <span class="estado listo">
+            Disponible
+          </span>
+        </div>
+        <h2>Sistema de gestión integral</h2>
+        <p class="cliente">Empresa de servicios legales y corporativos — Guatemala</p>
+        <p class="descripcion">Plataforma multimódulo en producción desde 2025: clientes, cotizaciones, documentación legal, marcas, reportes, auditoría y control de personal.</p>
+        <p class="destacado">13.761 clientes · 90 tablas · en evolución continua</p>
+        <div class="etiquetas"><span class="etiqueta">PHP</span><span class="etiqueta">MySQL</span><span class="etiqueta">Bootstrap</span></div>
+        <div class="accion">
+          <a class="boton" href="sistema/informe.html">Abrir demo<span class="flecha">→</span></a>
+        </div>
+      </div>
+      <div class="tarjeta activa">
+        <div class="tarjeta-encabezado">
+          <span class="numero">02</span>
+          <span class="estado listo">
+            Disponible
+          </span>
+        </div>
+        <h2>Sistema de expediente clínico digital</h2>
+        <p class="cliente">Centro de salud — municipio de Guatemala</p>
+        <p class="descripcion">Expediente clínico completo: pacientes, casos, historia clínica, examen mental, planes de tratamiento, sesiones y evolución.</p>
+        <p class="destacado">3 meses en uso · 9 entidades de dominio</p>
+        <div class="etiquetas"><span class="etiqueta">Next.js</span><span class="etiqueta">TypeScript</span><span class="etiqueta">PostgreSQL</span></div>
+        <div class="accion">
+          <a class="boton" href="neurodesk/informe.html">Abrir demo<span class="flecha">→</span></a>
+        </div>
+      </div>
+  </div>
+  <footer>Cada demo se abre en su propio informe, con el video y la captura de cada módulo. Las capturas se pueden abrir a tamaño completo.</footer>
+</div>
+</body>
+</html>
