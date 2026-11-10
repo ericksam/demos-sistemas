@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Informe de capturas — Sistema de expediente clínico digital</title>
+<style>
+  :root {
+    --fondo: #0e1116;
+    --panel: #161b22;
+    --borde: #262d38;
+    --texto: #e6edf3;
+    --tenue: #8b949e;
+    --acento: #4f8cff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--fondo);
+    color: var(--texto);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+  }
+  .contenedor { max-width: 1180px; margin: 0 auto; padding: 48px 24px 96px; }
+  .volver {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--tenue);
+    text-decoration: none;
+    font-size: 0.85rem;
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    padding: 7px 16px;
+    margin-bottom: 24px;
+    transition: color 0.16s ease, border-color 0.16s ease;
+  }
+  .volver:hover { color: var(--texto); border-color: var(--acento); }
+  .portada { border-bottom: 1px solid var(--borde); padding-bottom: 32px; margin-bottom: 48px; }
+  .portada h1 { font-size: 2rem; margin: 0 0 8px; letter-spacing: -0.02em; }
+  .portada p { margin: 0; color: var(--tenue); }
+  .resumen { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 24px; }
+  .dato {
+    background: var(--panel); border: 1px solid var(--borde); border-radius: 10px;
+    padding: 14px 20px; min-width: 150px;
+  }
+  .dato .valor { font-size: 1.5rem; font-weight: 600; }
+  .dato .etiqueta { font-size: 0.8rem; color: var(--tenue); text-transform: uppercase; letter-spacing: 0.06em; }
+  .modulo {
+    background: var(--panel); border: 1px solid var(--borde); border-radius: 14px;
+    padding: 28px; margin-bottom: 28px;
+  }
+  .modulo-encabezado { display: flex; align-items: flex-start; gap: 16px; }
+  .numero {
+    font-size: 0.85rem; font-weight: 700; color: var(--acento);
+    border: 1px solid var(--acento); border-radius: 8px; padding: 4px 10px;
+    flex-shrink: 0; margin-top: 4px;
+  }
+  .modulo-encabezado h2 { margin: 0; font-size: 1.25rem; }
+  .ruta { margin: 2px 0 0; font-size: 0.8rem; color: var(--tenue); font-family: ui-monospace, monospace; }
+  .duracion { margin-left: auto; font-size: 0.8rem; color: var(--tenue); flex-shrink: 0; }
+  .descripcion { color: #c2ccd6; margin: 16px 0 24px; }
+  .aviso {
+    background: rgba(248, 81, 73, 0.1); border: 1px solid rgba(248, 81, 73, 0.4);
+    color: #ff9b95; padding: 10px 14px; border-radius: 8px; font-size: 0.9rem;
+  }
+  .bloque { margin-top: 20px; }
+  .bloque h3 {
+    font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--tenue); margin: 0 0 10px; font-weight: 600;
+  }
+  video, img {
+    width: 100%; border-radius: 10px; border: 1px solid var(--borde);
+    display: block; background: #000;
+  }
+  img { cursor: zoom-in; }
+  footer { color: var(--tenue); font-size: 0.85rem; text-align: center; margin-top: 56px; }
+</style>
+</head>
+<body>
+<div class="contenedor">
+  <a class="volver" href="index.html">&larr; Volver a las demos</a>
+  <div class="portada">
+    <h1>Informe de capturas — Sistema de expediente clínico digital</h1>
+    <p>Recorrido de módulos con captura de pantalla y video. Generado el 10 de noviembre de 2026.</p>
+    <div class="resumen">
+      <div class="dato"><div class="valor">8</div><div class="etiqueta">Módulos</div></div>
+      <div class="dato"><div class="valor">8</div><div class="etiqueta">Capturados</div></div>
+      <div class="dato"><div class="valor">0</div><div class="etiqueta">Con error</div></div>
+    </div>
+  </div>
+
+      <article class="modulo">
+        <header class="modulo-encabezado">
+          <span class="numero">01</span>
+          <div>
+            <h2>Dashboard</h2>
+            <p class="ruta">dashboard</p>
+          </div>
+          <span class="duracion">6 s</span>
+        </header>
+        <p class="descripcion">Panel de inicio del centro de salud: resumen de pacientes, expedientes clínicos, sesiones pendientes y realizadas, con acceso rápido a cada área.</p>
+        
+        <div class="bloque">
+                 <h3>Recorrido en video</h3>
+                 <video src="videos/01-dashboard.webm" controls preload="metadata" playsinline></video>
+               </div>
+        <div class="bloque">
+                 <h3>Captura de pantalla</h3>
+                 <a href="capturas/01-dashboard.png" target="_blank">
+                   <img src="capturas/01-dashboard.png" alt="Dashboard" loading="lazy">
+                 </a>
+               </div>
+      </article>
+
+      <article class="modulo">
+        <header class="modulo-encabezado">
+          <span class="numero">02</span>
+          <div>
+            <h2>Pacientes</h2>
+            <p class="ruta">pacientes</p>
+          </div>
+          <span class="duracion">5 s</span>
+        </header>
+        <p class="descripcion">Listado de pacientes del sistema: nombre, edad, teléfono y acciones para editar o dar de baja cada uno.</p>
+        
+        <div class="bloque">
+                 <h3>Recorrido en video</h3>
+                 <video src="videos/02-pacientes.webm" controls preload="metadata" playsinline></video>
+               </div>
+        <div class="bloque">
+                 <h3>Captura de pantalla</h3>
+                 <a href="capturas/02-pacientes.png" target="_blank">
+                   <img src="capturas/02-pacientes.png" alt="Pacientes" loading="lazy">
+                 </a>
+               </div>
+      </article>
+
+      <article class="modulo">
+        <header class="modulo-encabezado">
+          <span class="numero">03</span>
+          <div>
+            <h2>Expedientes clínicos</h2>
+            <p class="ruta">expedientes</p>
+          </div>
+          <span class="duracion">5 s</span>
+        </header>
+        <p class="descripcion">Listado de expedientes clínicos activos con paciente, estado y fecha de apertura.</p>
+        
+        <div class="bloque">
+                 <h3>Recorrido en video</h3>
+                 <video src="videos/03-expedientes.webm" controls preload="metadata" playsinline></video>
+               </div>
+        <div class="bloque">
+                 <h3>Captura de pantalla</h3>
+                 <a href="capturas/03-expedientes.png" target="_blank">
+                   <img src="capturas/03-expedientes.png" alt="Expedientes clínicos" loading="lazy">
+                 </a>
+               </div>
+      </article>
+
+      <article class="modulo">
+        <header class="modulo-encabezado">
+          <span class="numero">04</span>
+          <div>
+            <h2>Detalle del expediente</h2>
+            <p class="ruta">expedientes/cmrvl13wq000104l5w5vmed2h</p>
+          </div>
+          <span class="duracion">7 s</span>
+        </header>
+        <p class="descripcion">Expediente completo del paciente: consentimiento, historia clínica, examen mental, plan de tratamiento y registro de sesiones.</p>
+        
+        <div class="bloque">
+                 <h3>Recorrido en video</h3>
+                 <video src="videos/04-expediente-detalle.webm" controls preload="metadata" playsinline></video>
+               </div>
+        <div class="bloque">
+                 <h3>Captura de pantalla</h3>
+                 <a href="capturas/04-expediente-detalle.png" target="_blank">
+                   <img src="capturas/04-expediente-detalle.png" alt="Detalle del expediente" loading="lazy">
+                 </a>
+               </div>
+      </article>
+
+      <article class="modulo">
+        <header class="modulo-encabezado">
+          <span class="numero">05</span>
+          <div>
+            <h2>Historia clínica</h2>
+            <p class="ruta">expedientes/cmrvl13wq000104l5w5vmed2h/historia-clinica</p>
+          </div>
+          <span class="duracion">7 s</span>
+        </header>
+        <p class="descripcion">Historia clínica detallada del paciente: motivo de consulta, medicación, antecedentes psicosociales y diagnóstico.</p>
+        
+        <div class="bloque">
+                 <h3>Recorrido en video</h3>
+                 <video src="videos/05-historia-clinica.webm" controls preload="metadata" playsinline></video>
+               </div>
+        <div class="bloque">
+                 <h3>Captura de pantalla</h3>
+                 <a href="capturas/05-historia-clinica.png" target="_blank">
+                   <img src="capturas/05-historia-clinica.png" alt="Historia clínica" loading="lazy">
+                 </a>
+               </div>
+      </article>
+
+      <article class="modulo">
+        <header class="modulo-encabezado">
+          <span class="numero">06</span>
+          <div>
+            <h2>Examen mental</h2>
+            <p class="ruta">expedientes/cmrvl13wq000104l5w5vmed2h/examen-mental</p>
+          </div>
+          <span class="duracion">6 s</span>
+        </header>
+        <p class="descripcion">Evaluaciones del estado mental registradas: apariencia, actitud, lenguaje, orientación, conciencia, desempeño, percepción y ánimo.</p>
+        
+        <div class="bloque">
+                 <h3>Recorrido en video</h3>
+                 <video src="videos/06-examen-mental.webm" controls preload="metadata" playsinline></video>
+               </div>
+        <div class="bloque">
+                 <h3>Captura de pantalla</h3>
+                 <a href="capturas/06-examen-mental.png" target="_blank">
+                   <img src="capturas/06-examen-mental.png" alt="Examen mental" loading="lazy">
+                 </a>
+               </div>
+      </article>
+
+      <article class="modulo">
+        <header class="modulo-encabezado">
+          <span class="numero">07</span>
+          <div>
+            <h2>Examen mental — detalle</h2>
+            <p class="ruta">expedientes/cmrvl13wq000104l5w5vmed2h/examen-mental/cmrxtom23000004l9bbub2qa6</p>
+          </div>
+          <span class="duracion">7 s</span>
+        </header>
+        <p class="descripcion">Detalle de una evaluación del estado mental: apariencia y actitud, evaluación del lenguaje, orientación, conciencia, desempeño, percepción, ánimo y otros síntomas.</p>
+        
+        <div class="bloque">
+                 <h3>Recorrido en video</h3>
+                 <video src="videos/07-examen-mental-detalle.webm" controls preload="metadata" playsinline></video>
+               </div>
+        <div class="bloque">
+                 <h3>Captura de pantalla</h3>
+                 <a href="capturas/07-examen-mental-detalle.png" target="_blank">
+                   <img src="capturas/07-examen-mental-detalle.png" alt="Examen mental — detalle" loading="lazy">
+                 </a>
+               </div>
+      </article>
+
+      <article class="modulo">
+        <header class="modulo-encabezado">
+          <span class="numero">08</span>
+          <div>
+            <h2>Hoja de evolución de sesión</h2>
+            <p class="ruta">expedientes/cmrvl13wq000104l5w5vmed2h/sesiones/cmrvl8r2o000004l2gomshl2r/evolucion</p>
+          </div>
+          <span class="duracion">8 s</span>
+        </header>
+        <p class="descripcion">Hoja de evolución de una sesión: vista previa de las 12 sesiones del expediente y evolución registrada por fecha.</p>
+        
+        <div class="bloque">
+                 <h3>Recorrido en video</h3>
+                 <video src="videos/08-evolucion-sesion.webm" controls preload="metadata" playsinline></video>
+               </div>
+        <div class="bloque">
+                 <h3>Captura de pantalla</h3>
+                 <a href="capturas/08-evolucion-sesion.png" target="_blank">
+                   <img src="capturas/08-evolucion-sesion.png" alt="Hoja de evolución de sesión" loading="lazy">
+                 </a>
+               </div>
+      </article>
+  <footer>Los videos están en formato WebM y se reproducen en el navegador. Las capturas abren a tamaño completo.</footer>
+</div>
+</body>
+</html>
