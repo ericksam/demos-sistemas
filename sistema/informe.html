@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Informe de capturas — Sistema de gestión integral</title>
+<style>
+  :root {
+    --fondo: #0e1116;
+    --panel: #161b22;
+    --borde: #262d38;
+    --texto: #e6edf3;
+    --tenue: #8b949e;
+    --acento: #4f8cff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--fondo);
+    color: var(--texto);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+  }
+  .contenedor { max-width: 1180px; margin: 0 auto; padding: 48px 24px 96px; }
+  .volver {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--tenue);
+    text-decoration: none;
+    font-size: 0.85rem;
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    padding: 7px 16px;
+    margin-bottom: 24px;
+    transition: color 0.16s ease, border-color 0.16s ease;
+  }
+  .volver:hover { color: var(--texto); border-color: var(--acento); }
+  .portada { border-bottom: 1px solid var(--borde); padding-bottom: 32px; margin-bottom: 48px; }
+  .portada h1 { font-size: 2rem; margin: 0 0 8px; letter-spacing: -0.02em; }
+  .portada p { margin: 0; color: var(--tenue); }
+  .resumen { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 24px; }
+  .dato {
+    background: var(--panel); border: 1px solid var(--borde); border-radius: 10px;
+    padding: 14px 20px; min-width: 150px;
+  }
+  .dato .valor { font-size: 1.5rem; font-weight: 600; }
+  .dato .etiqueta { font-size: 0.8rem; color: var(--tenue); text-transform: uppercase; letter-spacing: 0.06em; }
+  .modulo {
+    background: var(--panel); border: 1px solid var(--borde); border-radius: 14px;
+    padding: 28px; margin-bottom: 28px;
+  }
+  .modulo-encabezado { display: flex; align-items: flex-start; gap: 16px; }
+  .numero {
+    font-size: 0.85rem; font-weight: 700; color: var(--acento);
+    border: 1px solid var(--acento); border-radius: 8px; padding: 4px 10px;
+    flex-shrink: 0; margin-top: 4px;
+  }
+  .modulo-encabezado h2 { margin: 0; font-size: 1.25rem; }
+  .ruta { margin: 2px 0 0; font-size: 0.8rem; color: var(--tenue); font-family: ui-monospace, monospace; }
+  .duracion { margin-left: auto; font-size: 0.8rem; color: var(--tenue); flex-shrink: 0; }
+  .descripcion { color: #c2ccd6; margin: 16px 0 24px; }
+  .aviso {
+    background: rgba(248, 81, 73, 0.1); border: 1px solid rgba(248, 81, 73, 0.4);
+    color: #ff9b95; padding: 10px 14px; border-radius: 8px; font-size: 0.9rem;
+  }
+  .bloque { margin-top: 20px; }
+  .bloque h3 {
+    font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--tenue); margin: 0 0 10px; font-weight: 600;
+  }
+  video, img {
+    width: 100%; border-radius: 10px; border: 1px solid var(--borde);
+    display: block; background: #000;
+  }
+  img { cursor: zoom-in; }
+  footer { color: var(--tenue); font-size: 0.85rem; text-align: center; margin-top: 56px; }
+</style>
+</head>
+<body>
+<div class="contenedor">
+  <a class="volver" href="index.html">&larr; Volver a las demos</a>
+  <div class="portada">
+    <h1>Informe de capturas — Sistema de gestión integral</h1>
+    <p>Recorrido de módulos con captura de pantalla y video. Generado el 10 de noviembre de 2026.</p>
+    <div class="resumen">
+      <div class="dato"><div class="valor">11</div><div class="etiqueta">Módulos</div></div>
+      <div class="dato"><div class="valor">11</div><div class="etiqueta">Capturados</div></div>
+      <div class="dato"><div class="valor">0</div><div class="etiqueta">Con error</div></div>
+    </div>
+  </div>
+
+      <article class="modulo">
+        <header class="modulo-encabezado">
+          <span class="numero">01</span>
+          <div>
+            <h2>Panel principal</h2>
+            <p class="ruta">index.php</p>
+          </div>
+          <span class="duracion">6 s</span>
+        </header>
+        <p class="descripcion">Punto de entrada del sistema. Desde acá se accede a todos los módulos, y la visibilidad de cada acceso depende del perfil del usuario que inició sesión.</p>
+        
+        <div class="bloque">
+                 <h3>Recorrido en video</h3>
+                 <video src="videos/01-panel.webm" controls preload="metadata" playsinline></video>
+               </div>
+        <div class="bloque">
+                 <h3>Captura de pantalla</h3>
+                 <a href="capturas/01-panel.png" target="_blank">
+                   <img src="capturas/01-panel.png" alt="Panel principal" loading="lazy">
+                 </a>
+               </div>
+      </article>
+
+      <article class="modulo">
+        <header class="modulo-encabezado">
+          <span class="numero">02</span>
+          <div>
+            <h2>Clientes registrados</h2>
+            <p class="ruta">listado_clientes_nuevos.php</p>
+          </div>
+          <span class="duracion">10 s</span>
+        </header>
+        <p class="descripcion">Listado completo de clientes con el total a la vista: 13.761 registros. Cada fila trae vendedor asignado, estado de la venta, red social de origen, trámite inicial, costo, número de trámites y fecha de inicio. Se filtra por estado, red social, tipo de trámite y rango de fechas, o se busca por nombre, teléfono o código.</p>
+        
+        <div class="bloque">
+                 <h3>Recorrido en video</h3>
+                 <video src="videos/02-clientes.webm" controls preload="metadata" playsinline></video>
+               </div>
+        <div class="bloque">
+                 <h3>Captura de pantalla</h3>
+                 <a href="capturas/02-clientes.png" target="_blank">
+                   <img src="capturas/02-clientes.png" alt="Clientes registrados" loading="lazy">
+                 </a>
+               </div>
+      </article>
+
+      <article class="modulo">
+        <header class="modulo-encabezado">
+          <span class="numero">03</span>
+          <div>
+            <h2>Ficha del cliente en PDF</h2>
+            <p class="ruta">ficha_cliente.php?id_cliente=4333</p>
+          </div>
+          <span class="duracion">5 s</span>
+        </header>
+        <p class="descripcion">La ficha del cliente generada como documento: datos, trámites, costo de cada uno y saldo pendiente. Se produce desde el sistema con los datos del expediente, sin re-tipear nada a mano.</p>
+        
+        <div class="bloque">
+                 <h3>Recorrido en video</h3>
+                 <video src="videos/03-ficha-cliente.webm" controls preload="metadata" playsinline></video>
+               </div>
+        <div class="bloque">
+                 <h3>Captura de pantalla</h3>
+                 <a href="capturas/03-ficha-cliente.png" target="_blank">
+                   <img src="capturas/03-ficha-cliente.png" alt="Ficha del cliente en PDF" loading="lazy">
+                 </a>
+               </div>
+      </article>
+
+      <article class="modulo">
+        <header class="modulo-encabezado">
+          <span class="numero">04</span>
+          <div>
+            <h2>Cotizaciones</h2>
+            <p class="ruta">historial_coti_clientes.php</p>
+          </div>
+          <span class="duracion">6 s</span>
+        </header>
+        <p class="descripcion">Historial de cotizaciones con su estado de venta. Cada cotización se genera en dos monedas y dos formatos, se puede reutilizar, reordenar ítems y dejarle notas.</p>
+        
+        <div class="bloque">
+                 <h3>Recorrido en video</h3>
+                 <video src="videos/04-cotizaciones.webm" controls preload="metadata" playsinline></video>
+               </div>
+        <div class="bloque">
+                 <h3>Captura de pantalla</h3>
+                 <a href="capturas/04-cotizaciones.png" target="_blank">
+                   <img src="capturas/04-cotizaciones.png" alt="Cotizaciones" loading="lazy">
+                 </a>
+               </div>
+      </article>
+
+      <article class="modulo">
+        <header class="modulo-encabezado">
+          <span class="numero">05</span>
+          <div>
+            <h2>Catálogo de trámites y precios</h2>
+            <p class="ruta">listado_tramites.php?pagina=1</p>
+          </div>
+          <span class="duracion">5 s</span>
+        </header>
+        <p class="descripcion">El catálogo de servicios con su costo: registro de marca, sociedades anónimas, patentes, contratos, declaraciones juradas. Es la base sobre la que se cotiza y se calcula cada expediente.</p>
+        
+        <div class="bloque">
+                 <h3>Recorrido en video</h3>
+                 <video src="videos/05-tramites.webm" controls preload="metadata" playsinline></video>
+               </div>
+        <div class="bloque">
+                 <h3>Captura de pantalla</h3>
+                 <a href="capturas/05-tramites.png" target="_blank">
+                   <img src="capturas/05-tramites.png" alt="Catálogo de trámites y precios" loading="lazy">
+                 </a>
+               </div>
+      </article>
+
+      <article class="modulo">
+        <header class="modulo-encabezado">
+          <span class="numero">06</span>
+          <div>
+            <h2>Documentación de clientes</h2>
+            <p class="ruta">doc_clientes.php</p>
+          </div>
+          <span class="duracion">9 s</span>
+        </header>
+        <p class="descripcion">Estado de cada cliente frente a sus trámites: finalizados, en proceso o sin registrar, con la marca o sociedad asociada. Setenta y ocho páginas de expedientes navegables y filtrables.</p>
+        
+        <div class="bloque">
+                 <h3>Recorrido en video</h3>
+                 <video src="videos/06-documentacion.webm" controls preload="metadata" playsinline></video>
+               </div>
+        <div class="bloque">
+                 <h3>Captura de pantalla</h3>
+                 <a href="capturas/06-documentacion.png" target="_blank">
+                   <img src="capturas/06-documentacion.png" alt="Documentación de clientes" loading="lazy">
+                 </a>
+               </div>
+      </article>
+
+      <article class="modulo">
+        <header class="modulo-encabezado">
+          <span class="numero">07</span>
+          <div>
+            <h2>Administración de marcas</h2>
+            <p class="ruta">listado_admon_marcas.php?page=1</p>
+          </div>
+          <span class="duracion">9 s</span>
+        </header>
+        <p class="descripcion">Gestión del registro marcario: expedientes por tipo de solicitud, comprobantes de pago, títulos y reportes de pago por período. Más de quinientos expedientes con sus archivos asociados.</p>
+        
+        <div class="bloque">
+                 <h3>Recorrido en video</h3>
+                 <video src="videos/07-marcas.webm" controls preload="metadata" playsinline></video>
+               </div>
+        <div class="bloque">
+                 <h3>Captura de pantalla</h3>
+                 <a href="capturas/07-marcas.png" target="_blank">
+                   <img src="capturas/07-marcas.png" alt="Administración de marcas" loading="lazy">
+                 </a>
+               </div>
+      </article>
+
+      <article class="modulo">
+        <header class="modulo-encabezado">
+          <span class="numero">08</span>
+          <div>
+            <h2>Reporte de llamadas</h2>
+            <p class="ruta">reporte_llamadas.php</p>
+          </div>
+          <span class="duracion">7 s</span>
+        </header>
+        <p class="descripcion">Seguimiento de llamadas a clientes: quién llamó, cuándo, cuántos intentos y en qué quedó. Con búsqueda, filtros y exportación a PDF desde la misma pantalla.</p>
+        
+        <div class="bloque">
+                 <h3>Recorrido en video</h3>
+                 <video src="videos/08-reporte-llamadas.webm" controls preload="metadata" playsinline></video>
+               </div>
+        <div class="bloque">
+                 <h3>Captura de pantalla</h3>
+                 <a href="capturas/08-reporte-llamadas.png" target="_blank">
+                   <img src="capturas/08-reporte-llamadas.png" alt="Reporte de llamadas" loading="lazy">
+                 </a>
+               </div>
+      </article>
+
+      <article class="modulo">
+        <header class="modulo-encabezado">
+          <span class="numero">09</span>
+          <div>
+            <h2>Reporte de pagos de marca</h2>
+            <p class="ruta">marcas/reporte_pagos_marca.php</p>
+          </div>
+          <span class="duracion">8 s</span>
+        </header>
+        <p class="descripcion">Estado de cuenta de cada expediente marcario: monto total, pagado, pendiente, pago de edicto y pago de título. Es el reporte que reemplaza el seguimiento manual de cobros.</p>
+        
+        <div class="bloque">
+                 <h3>Recorrido en video</h3>
+                 <video src="videos/09-reporte-pagos.webm" controls preload="metadata" playsinline></video>
+               </div>
+        <div class="bloque">
+                 <h3>Captura de pantalla</h3>
+                 <a href="capturas/09-reporte-pagos.png" target="_blank">
+                   <img src="capturas/09-reporte-pagos.png" alt="Reporte de pagos de marca" loading="lazy">
+                 </a>
+               </div>
+      </article>
+
+      <article class="modulo">
+        <header class="modulo-encabezado">
+          <span class="numero">10</span>
+          <div>
+            <h2>Bitácora de auditoría</h2>
+            <p class="ruta">bitacora.php</p>
+          </div>
+          <span class="duracion">6 s</span>
+        </header>
+        <p class="descripcion">Cada acción registrada: quién hizo qué y cuándo. Cuando hay un error en un expediente, esto es lo que permite reconstruir qué pasó en lugar de suponerlo.</p>
+        
+        <div class="bloque">
+                 <h3>Recorrido en video</h3>
+                 <video src="videos/10-bitacora.webm" controls preload="metadata" playsinline></video>
+               </div>
+        <div class="bloque">
+                 <h3>Captura de pantalla</h3>
+                 <a href="capturas/10-bitacora.png" target="_blank">
+                   <img src="capturas/10-bitacora.png" alt="Bitácora de auditoría" loading="lazy">
+                 </a>
+               </div>
+      </article>
+
+      <article class="modulo">
+        <header class="modulo-encabezado">
+          <span class="numero">11</span>
+          <div>
+            <h2>Asistencia y tareas</h2>
+            <p class="ruta">asistencia/tareas_dia.php</p>
+          </div>
+          <span class="duracion">6 s</span>
+        </header>
+        <p class="descripcion">Marcaje de entrada y salida, control de almuerzos y salidas extraordinarias. Tareas del día con múltiples responsables, prioridad, comentarios, documentos adjuntos y notificaciones.</p>
+        
+        <div class="bloque">
+                 <h3>Recorrido en video</h3>
+                 <video src="videos/11-asistencia.webm" controls preload="metadata" playsinline></video>
+               </div>
+        <div class="bloque">
+                 <h3>Captura de pantalla</h3>
+                 <a href="capturas/11-asistencia.png" target="_blank">
+                   <img src="capturas/11-asistencia.png" alt="Asistencia y tareas" loading="lazy">
+                 </a>
+               </div>
+      </article>
+  <footer>Los videos están en formato WebM y se reproducen en el navegador. Las capturas abren a tamaño completo.</footer>
+</div>
+</body>
+</html>

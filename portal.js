@@ -17,7 +17,7 @@ const fs = require('fs');
 const path = require('path');
 
 const RAIZ = __dirname;
-const SALIDA = path.join(RAIZ, 'salida');
+const SALIDA = RAIZ;
 const CONFIG = path.join(RAIZ, 'demos.json');
 
 function escapar(texto) {
