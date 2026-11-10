@@ -359,7 +359,7 @@ function generarInforme(demo, resultados, rutas) {
 </head>
 <body>
 <div class="contenedor">
-  <a class="volver" href="index.html">&larr; Volver a las demos</a>
+  <a class="volver" href="../index.html">&larr; Volver a las demos</a>
   <div class="portada">
     <h1>Informe de capturas — ${escapar(demo.nombre)}</h1>
     <p>Recorrido de módulos con captura de pantalla y video. Generado el ${escapar(fecha)}.</p>
