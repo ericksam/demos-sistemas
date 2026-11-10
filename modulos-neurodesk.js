@@ -106,6 +106,19 @@ const modulos = [
       { t: 'scroll', px: -600, ms: 700 },
     ],
   },
+  {
+    id: '09-sesiones-meses',
+    nombre: 'Sesiones y navegación por meses',
+    descripcion:
+      'Listado de sesiones del expediente con navegación por meses. Permite regresar hasta agosto para mostrar el historial completo de seguimiento del paciente.',
+    ruta: 'expedientes/cmrvl13wq000104l5w5vmed2h/sesiones',
+    acciones: [
+      { t: 'esperar', ms: 2000 },
+      { t: 'scroll', px: 700, ms: 900 },
+      { t: 'scroll', px: 700, ms: 900 },
+      { t: 'scroll', px: -1400, ms: 700 },
+    ],
+  },
 ];
 
 module.exports = { modulos };
