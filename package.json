@@ -1,0 +1,17 @@
+{
+  "name": "2setenta-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "demo": "node capturar.js",
+    "portal": "node portal.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Capturas y video de los modulos del sistema para demo comercial",
+  "devDependencies": {
+    "playwright": "^1.65.0"
+  },
+  "private": true
+}

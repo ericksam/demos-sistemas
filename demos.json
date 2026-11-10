@@ -1,0 +1,42 @@
+{
+  "titulo": "Demos del sistema",
+  "subtitulo": "Recorrido de módulos con captura de pantalla y video de cada proyecto. Cada demo se genera ejecutando el script de captura sobre el sistema en funcionamiento.",
+  "demos": [
+    {
+      "id": "sistema-gestion",
+      "nombre": "Sistema de gestión integral",
+      "cliente": "Empresa de servicios legales y corporativos — Guatemala",
+      "descripcion": "Plataforma multimódulo en producción desde 2025: clientes, cotizaciones, documentación legal, marcas, reportes, auditoría y control de personal.",
+      "carpeta": "sistema",
+      "archivo": "sistema/informe.html",
+      "baseUrl": "http://localhost:8080/2setenta/",
+      "modulos": "modulos-sistema.js",
+      "sesion": ".sesion-sistema.json",
+      "login": {
+        "ruta": "login.php",
+        "verificar": "index.php",
+        "patron": "login(_pagina2)?\\.php"
+      },
+      "etiquetas": ["PHP", "MySQL", "Bootstrap"],
+      "destacado": "13.761 clientes · 90 tablas · en evolución continua"
+    },
+    {
+      "id": "neurodesk",
+      "nombre": "Sistema de expediente clínico digital",
+      "cliente": "Centro de salud — municipio de Guatemala",
+      "descripcion": "Expediente clínico completo: pacientes, casos, historia clínica, examen mental, planes de tratamiento, sesiones y evolución.",
+      "carpeta": "neurodesk",
+      "archivo": "neurodesk/informe.html",
+      "baseUrl": "http://192.168.0.100:3000/",
+      "modulos": "modulos-neurodesk.js",
+      "sesion": ".sesion-neurodesk.json",
+      "login": {
+        "ruta": "login",
+        "verificar": "dashboard",
+        "patron": "/login"
+      },
+      "etiquetas": ["Next.js", "TypeScript", "PostgreSQL"],
+      "destacado": "3 meses en uso · 9 entidades de dominio"
+    }
+  ]
+}
